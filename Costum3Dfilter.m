@@ -2,7 +2,7 @@ A = rand([300 300 300]); % 3-D image
 sigma_x = 1;
 sigma_y = 2;
 sigma_z_eqn = '2.*z'; % string representing equation for sigma_z
-z = (1:300)';
+z = (1:size(A,3))';
 filtered_A = custom3Dfilter(A, sigma_x, sigma_y, sigma_z_eqn, z);
 
 function filtered_A = custom3Dfilter(A, sigma_x, sigma_y, sigma_z_eqn, z)
